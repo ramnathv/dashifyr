@@ -1,0 +1,5 @@
+justgage:
+  jshead:
+    - "raphael.2.1.0.min.js"
+    - "justgage.1.0.1.min.js"
+    - "shinyJustgage.js"
