@@ -1,0 +1,34 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+body {
+  margin: 0;
+  background-color: #444;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+.gridster .widget.gs_w {
+ text-align: center;
+ display: table-cell;
+ vertical-align: middle;
+}
+
+.gridster .widget-text.gs_w {
+  background-color: lightgoldenrodyellow;
+}
+
+.gridster .widget-list.gs_w {
+  background-color: #12b0c5;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.gridster .widget-twitter.gs_w{
+  background-color: #dc5945;
+}
+
+.gridster .widget-meter.gs_w{
+  background-color: #9c4274;
+}

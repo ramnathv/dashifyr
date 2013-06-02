@@ -1,0 +1,3 @@
+handlebars:
+  jshead: [handlebars.min.js, shinyHandlebars.js]
+

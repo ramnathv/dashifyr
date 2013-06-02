@@ -1,0 +1,3 @@
+knob:
+  jshead: [jquery.knob.js, shinyKnob.js]
+  css: [knob.css]
