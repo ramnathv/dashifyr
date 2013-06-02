@@ -11,3 +11,5 @@ require(dashifyr)
 demoapp = system.file('demo', package = 'dashifyr')
 shiny::runApp(demoapp)
 ```
+
+![screenshot](inst/demo/demo.png)
