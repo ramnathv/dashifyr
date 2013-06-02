@@ -5,8 +5,14 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.container {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: block;
+}
+
 h1 {
-  color: white;
+  color: 'darkslategray';
 }
 
 .gridster .widget.gs_w {
@@ -15,18 +21,28 @@ h1 {
  vertical-align: middle;
 }
 
+/*
 .gridster .widget-text.gs_w {
   background-color: lightgoldenrodyellow;
 }
+*/
 
 .gridster .widget-list.gs_w {
   background-color: #12b0c5;
   text-align: left;
-  padding-left: 30px;
+}
+
+.gridster .widget-list.gs_w h2{
+  text-align: center;
 }
 
 .gridster .widget-twitter.gs_w{
-  background-color: #dc5945;
+  background-color: lightgoldenrodyellow;
+}
+
+.widget-twitter > h1{
+  font-family: "Open Sans";
+  color: 'orange';
 }
 
 .gridster .widget-meter.gs_w{

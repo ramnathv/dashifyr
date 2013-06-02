@@ -21,22 +21,39 @@ shinyServer(function(input, output, session){
     invalidateLater(1000, session)
     dat = mtcars[sample(NROW(mtcars), 20),]
     r1 <- rPlot(mpg ~ wt, data = dat, type = 'point')
-    r1$set(dom = 'mychart', width = 500, height = 250)
+    r1$set(dom = 'mychart', width = 500, height = 275)
     return(r1)
   })
   
-  output$twitter = reactive({
-    invalidateLater(10000, session)
-    keyword = sample(c('rstats', 'slidify', 'rcharts'), 1)
-    require(httr)
-    tweets = GET(
-      url = 'http://search.twitter.com/search.json',
-      query = list(q = keyword, rpp = 5, callback = '?')
-    )
-    content(tweets)$results[[1]]
+  output$myChart2 = renderChart({
+    L1 <- Leaflet$new()
+    L1$tileLayer(provider = 'Stamen.TonerLite')
+    L1$setView(c(40.73, -73.90), 13)
+    L1
   })
   
+#   output$twitter = reactive({
+#     invalidateLater(10000, session)
+#     keyword = sample(c('rstats', 'slidify', 'rcharts'), 1)
+#     require(httr)
+#     tweets = GET(
+#       url = 'http://search.twitter.com/search.json',
+#       query = list(q = keyword, rpp = 5, callback = '?')
+#     )
+#     content(tweets)$results[[1]]
+#   })
+#   
   output$pieChart = renderGvis({
     gvisPieChart(CityPopularity, options = list(width = 250, height = 300))
+  })
+  
+  output$live_gauge <- renderGage({
+    invalidateLater(5000, session)
+    running_mean <- mean(sample(200, 20))
+    list(
+      value = round(running_mean, 1), 
+      max = 200,
+      titleFontColor = 'darkmagenta'
+    )
   })
 })
