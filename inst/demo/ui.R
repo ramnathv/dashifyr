@@ -16,12 +16,13 @@ shinyUI(bootstrapPage(
   div(class = 'container',
     gridster(width = 300, height = 325,
       gridsterItem(col = 1, row = 1, sizex = 1, sizey = 1, class='widget widget-text',
-        tags$style('.xcharts{width: 250px; height:250px;}'),
-        h1('xCharts'),
-        showOutput('myChart5', 'xcharts')
-        # justgageOutput('live_gauge', width = 250, height = 200)
+        # tags$style('.xcharts{width: 250px; height:250px;}'),
+        # h1('xCharts'),
+        # showOutput('myChart5', 'xcharts')
+        justgageOutput('live_gauge', width = 250, height = 200)
       ),
       gridsterItem(col = 1, row = 1, sizex = 1, sizey = 1, class='widget widget-meter',
+        h1('Knob'),
         knobOutput('knob')
       ),
       gridsterItem(col = 1, row = 1, sizex = 1, sizey = 1, class='widget widget-list',
