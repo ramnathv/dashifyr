@@ -33,7 +33,7 @@ shiny::runApp(demoapp)
 
 Dashifyr uses a modular design aimed at making it easy to add new dashboard widgets. Let us take the example of the `knob` widget, which uses [jqueryKnob](http://anthonyterrien.com/knob/). The `inst/widgets/knob` library contains the following files:
 
-```
+```yaml
 config.yml      --> configuration file specifying assets
 jquery.knob.js  --> the javascript library file
 knob.css        --> styles for the knob widget
