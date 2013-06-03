@@ -29,6 +29,59 @@ demoapp = system.file('demo', package = 'dashifyr')
 shiny::runApp(demoapp)
 ```
 
+### Design
+
+Dashifyr uses a modular design aimed at making it easy to add new dashboard widgets. Let us take the example of the `knob` widget, which uses [jqueryKnob](http://anthonyterrien.com/knob/). The `inst/widgets/knob` library contains the following files:
+
+```
+config.yml      --> configuration file specifying assets
+jquery.knob.js  --> the javascript library file
+knob.css        --> styles for the knob widget
+shinyKnob.js    --> Shiny bindings 
+```
+
+Let us take a deeper look into each of these files.
+
+__Config.yml__
+
+It is a YAML file that contains the relative paths of the css and js assets. 
+
+```
+knob:
+  jshead: [jquery.knob.js, shinyKnob.js]
+  css: [knob.css]
+``
+
+__shinyKnob.js__
+
+This is a javascript file that provides the bindings necessary to communicate with the data.
+
+```js
+// This output binding handles statusOutputBindings
+var knobOutputBinding = new Shiny.OutputBinding();
+$.extend(knobOutputBinding, {
+  find: function(scope) {
+    return scope.find('.knob_output');
+  },
+  renderValue: function(el, data) {
+    if (!$(el).val()){
+      $(el).knob()
+    }
+    $(el).val(data.val).trigger('change')
+    $(el).trigger('configure', data.config)
+  }
+});
+Shiny.outputBindings.register(knobOutputBinding, 'dashboard.knobOutputBinding');
+```
+
+In addition to these files, a widget should also specify a *Output function. The `knobOutput` function is shown below.
+
+```coffee
+knobOutput <- function(outputId, value){
+ tags$input(id = outputId, class = "knob_output")
+}
+```
+
 ### Credits
 
 I would like to thank [Winston Chang](https://github.com/wch) for providing me with the inspiration for this dashboarding framework. I have borrowed extensively from his [shiny dashboard app demo](https://github.com/wch/shiny-jsdemo). I have also stolen ideas from the [dashing framework](https://github.com/shopify/dashing), to create a modular plug-and-play widget infrastructure, replacing the batman bindings with shiny bindings.
