@@ -2,7 +2,7 @@ require(shiny)
 require(rCharts)
 require(googleVis)
 shinyServer(function(input, output, session){
-  DELAY = 1000
+  DELAY = 5000
   output$test = reactive({
     invalidateLater(DELAY, session)
     selected = mtcars[sample(NROW(mtcars), 1),]
