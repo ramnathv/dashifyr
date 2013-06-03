@@ -21,7 +21,7 @@ Note that you can also install `httpuv` from source, by following these instruct
 
 ### Demo
 
-Dashifyr comes with a demo app, which can be run using the following commands.
+Dashifyr comes with a [demo app](https://github.com/ramnathv/dashifyr/tree/master/inst/demo), which can be run using the following commands.
 
 ```coffee
 require(dashifyr)
