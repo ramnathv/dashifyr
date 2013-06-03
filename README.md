@@ -13,7 +13,7 @@ install.packages("httpuv",
   repos=c(RStudio="http://rstudio.org/_packages", CRAN="http://cran.rstudio.com/"))
 require(devtools)
 install_github('shiny', 'rstudio')
-install_github('shinyGridster', 'wch')
+install_github('shiny-gridster', 'wch')
 install_github('dashifyr', 'ramnathv')
 ```
 
