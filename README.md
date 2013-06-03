@@ -1,8 +1,8 @@
 ## Dashifyr
 
-A dashboarding framework based on Shiny. 
+Dashifyr is an experimental dashboarding framework based on Shiny. It provides a highly modular plug-and-play infrastructure for creating high-quality dashboards. It supports multiple widgets, and is extensible. Interactive JS charts can be easily integrated into Dashifyr using [rCharts](http://github.com/ramnathv/rCharts) 
 
-Note. Highly Experimental!
+![screenshot](inst/demo/demo.png)
 
 ### Installation
 
@@ -28,8 +28,6 @@ require(dashifyr)
 demoapp = system.file('demo', package = 'dashifyr')
 shiny::runApp(demoapp)
 ```
-
-![screenshot](inst/demo/demo.png)
 
 ### Credits
 
