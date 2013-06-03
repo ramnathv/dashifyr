@@ -31,9 +31,7 @@ shiny::runApp(demoapp)
 
 ### Credits
 
-I would like to thank [Winston Chang](https://github.com/wch) for providing me with the inspiration for this dashboarding framework. I have borrowed extensively from his [shiny dashboard app demo](https://github.com/wch/shiny-jsdemo). 
-
-I have also stolen ideas from the [dashing framework](https://github.com/shopify/dashing), to create a modular plug-and-play widget infrastructure, replacing the batman bindings with shiny bindings.
+I would like to thank [Winston Chang](https://github.com/wch) for providing me with the inspiration for this dashboarding framework. I have borrowed extensively from his [shiny dashboard app demo](https://github.com/wch/shiny-jsdemo). I have also stolen ideas from the [dashing framework](https://github.com/shopify/dashing), to create a modular plug-and-play widget infrastructure, replacing the batman bindings with shiny bindings.
 
 
 ### License
