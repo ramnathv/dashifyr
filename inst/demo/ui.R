@@ -16,11 +16,13 @@ shinyUI(bootstrapPage(
   div(class = 'container',
     gridster(width = 300, height = 325,
       gridsterItem(col = 1, row = 1, sizex = 1, sizey = 1, class='widget widget-text',
-        # showOutput('mychart', 'polycharts')
-        justgageOutput('live_gauge', width = 250, height = 200)
+        tags$style('.xcharts{width: 250px; height:250px;}'),
+        h1('xCharts'),
+        showOutput('myChart5', 'xcharts')
+        # justgageOutput('live_gauge', width = 250, height = 200)
       ),
       gridsterItem(col = 1, row = 1, sizex = 1, sizey = 1, class='widget widget-meter',
-          knobOutput('knob')
+        knobOutput('knob')
       ),
       gridsterItem(col = 1, row = 1, sizex = 1, sizey = 1, class='widget widget-list',
        handleBarsOutput('test', 'tmpl'),
@@ -31,9 +33,9 @@ shinyUI(bootstrapPage(
          </ol>'
         )
       ),
-      gridsterItem(row = 2, col = 1, sizex = 2, sizey = 1, class = 'widget widget-twitter',
-        h1('rCharts'),
-        showOutput('mychart', 'polycharts')
+      gridsterItem(row = 2, col = 1, sizex = 1, sizey = 1, class = 'widget widget-twitter',
+        h1('Rickshaw'),
+        showOutput('mychart3', 'rickshaw')
       ),
 #       gridsterItem(row = 2, col = 1, sizex = 2, sizey = 1, class = 'widget widget-twitter',
 #         h1('Twitter Feed'),
@@ -49,8 +51,13 @@ shinyUI(bootstrapPage(
 #          </ul>"
 #         )
 #       ),
+      gridsterItem(row = 2, col = 1, sizex = 1, sizey = 1, class = 'widget widget-twitter',
+        h1('Polychart'),
+        showOutput('mychart', 'polycharts')
+      ),
       gridsterItem(row = 2, col = 1, sizex = 1, sizey = 1, class = 'widget',
-        htmlOutput('pieChart')
+        h1('MorrisJS'),
+        showOutput('myChart4', 'morris')
       )
    )
   )
