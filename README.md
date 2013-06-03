@@ -30,3 +30,20 @@ shiny::runApp(demoapp)
 ```
 
 ![screenshot](inst/demo/demo.png)
+
+### Credits
+
+I would like to thank [Winston Chang](https://github.com/wch) for providing me with the inspiration for this dashboarding framework. I have borrowed extensively from his [shiny dashboard app demo](https://github.com/wch/shiny-jsdemo). 
+
+I have also stolen ideas from the [dashing framework](https://github.com/shopify/dashing), to create a modular plug-and-play widget infrastructure, replacing the batman bindings with shiny bindings.
+
+
+### License
+
+Dashifyr is released under the MIT License. All R package dependencies and javascript libraries used by Dashifyr are licensed under their own terms. Please check before making use of them commercially.
+
+### See More
+
+Other interesting dashboarding libraries based on Shiny in the making are
+
+- [ShinyDash by TresleTech](https://github.com/trestletech/ShinyDash)
