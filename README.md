@@ -9,8 +9,7 @@ Dashifyr is an experimental dashboarding framework based on Shiny. It provides a
 Dashifyr requires the latest development versions of `httpuv`, `shiny` and `shinyGridster`. You can install these dependencies along with `dashifyr` using the following lines
 
 ```coffee
-install.packages("httpuv", 
-  repos=c(RStudio="http://rstudio.org/_packages", CRAN="http://cran.rstudio.com/"))
+install.packages("httpuv")
 require(devtools)
 install_github('shiny', 'rstudio')
 install_github('shiny-gridster', 'wch')
